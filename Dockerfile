@@ -18,4 +18,4 @@ RUN g++ -std=c++17 -I /usr/local/boost_1_70_0 main/*.cc lib/*.hpp \
         -lboost_system -lboost_filesystem -lpthread
 
 
-CMD ["/bin/bash", "./a.out"]
+CMD ["/bin/bash", "/app/a.out"]
