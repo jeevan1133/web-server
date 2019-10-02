@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.14)
+project(parallel_downloading)
+
+set(CMAKE_CXX_STANDARD 17)
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+set(BOOST_ALL_NO_LIB)
+find_package(Boost 1.70.0 COMPONENTS filesystem iostreams regex REQUIRED)
+
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+    add_executable(parallel_downloading main/server.cc lib/errors.hpp lib/server.hpp lib/utility.hpp)
+    target_link_libraries(parallel_downloading ${Boost_LIBRARIES})
+endif()

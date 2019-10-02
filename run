@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./bazel-bin/main/server conf.toml
+kill -9 `lsof -i:31645`

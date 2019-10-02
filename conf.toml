@@ -1,0 +1,22 @@
+# This is a configuration file for the server
+# The value of keys should be a list
+# For every new declaration an empty line must be present
+# This line defines port number to be used
+# Can be multiple port number for fall back. If failed to assign
+# to the given port number, server runs on the port assigned by the OS
+[port]
+port = [ 31645 ]
+
+# Contributors
+[metadata]
+authors = [Dao, Jeevan, John]
+homepage = ["https://github.com/hmongkey12/parallel_downloading"]
+
+# Requires
+[dependencies]
+requires = [ c++17, boost ]
+
+# File to send
+# Supply the name of the file that you wish the server to send
+[file]
+file = [ ./sendFile.txt ]

@@ -1,0 +1,7 @@
+#!/bin/bash
+VAR=$1
+if [ "$VAR" != "clean" ]; then
+   $(build --show_timestamps --cxxopt="-std=c++17" --color=yes //main:*)
+else
+   $(bazel clean)
+fi
